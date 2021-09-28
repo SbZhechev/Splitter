@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --background-color: hsl(185, 41%, 84%);
+    --accent-color: hsl(172, 67%, 45%);
+    --primary-color: hsl(183, 100%, 15%);
+    --input-background-color: hsl(185, 41%, 95%);
+
+    font-family: 'Space Mono', monospace;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    padding: 0 1em;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+input, input:focus {
+    all: unset;
+    background-color: var(--input-background-color);
+    display: inline;
+    text-align: right;
+    color: var(--primary-color);
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+input:focus {
+    border-color: var(--accent-color);
+}
+
+.blockElement {
+    display: block;
+}
+
+.app {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin: 5vw 0;
+}
+
+.container {
+    background-color: white;
+    border-radius: 20px;
+    max-width: 800px;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5em;
+}
+
+.inputContainer {
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    bottom: 0.5em;
+    left: 0.5em;
+}
+
+.billInfo {
+    flex-basis: 45%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    gap: 0.25em;
+}
+
+.tipButton {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.tipButton:hover {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+.tipButton.selected {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.tipButton.selected:hover {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+.gridElement, .gridElement:focus {
+    width: 40%;
+    padding: 0.25em 0.5em;
+}
+
+.numberValidation {
+    font-size: 0.5em;
+    color: red;
+}
+
+.numberOfPeople.invalid {
+    border-color: red;
+}
+
+.tipInfo {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    flex-basis: 45%;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 1em;
+    border-radius: 20px;
+}
+
+.tipSummary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textWhite {
+    color: white;
+}
+
+.textBlue {
+    color: var(--background-color);
+}
+
+.resetButton {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    padding: 0.5em 0;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+
+@media screen and (min-width: 700px) {
+    .buttons {
+        gap: 0.2em;
+    }
+
+    .gridElement, .gridElement:focus {
+        width: 25%;
+    }
+
+    .moneyAmount {
+        font-size: 1.5rem;
+    }
+}

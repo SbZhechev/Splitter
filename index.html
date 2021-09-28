@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; margin-top: auto;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+
+<body class="app">
+
+  <img class="logo" src="./images/logo.svg" alt="splitter">
+
+  <article class="container">
+    <form class="billInfo">
+      <fieldset class="inputContainer">
+        <label for="billAmount">Bill</label>
+        <input type="text" name="billAmount" id="billAmount" class="blockElement" value="0">
+        <img src="./images/icon-dollar.svg" alt="dollars" class="icon">
+      </fieldset>
+      <fieldset>
+        <label>Select tip %</label>
+        <div class="buttons">
+          <button type="button" class="tipButton gridElement" data-percent="5">5%</button>
+          <button type="button" class="tipButton gridElement" data-percent="10">10%</button>
+          <button type="button" class="tipButton gridElement" data-percent="15">15%</button>
+          <button type="button" class="tipButton gridElement" data-percent="25">25%</button>
+          <button type="button" class="tipButton gridElement" data-percent="50">50%</button>
+          <input type="text" name="customTipAmount" id="customTipAmount" placeholder="Custom" class="gridElement tipInput">
+        </div>
+      </fieldset>
+      <fieldset class="inputContainer">
+        <label for="numberOfPeople">Number of People <span id="numberOfPeopleValidation" class="numberValidation"></span></label>
+        <input type="text" name="numberOfPeople" id="numberOfPeople" class="blockElement numberOfPeople" value="0">
+        <img src="./images/icon-person.svg" alt="peope" class="icon">
+      </fieldset>
+    </form>
+
+    <section class="tipInfo">
+      <div class="tipSummary">
+        <p><span class="textWhite">Tip Amount</span> <br> <span class="textBlue">/ person</span></p>
+        <p class="moneyAmount" id="tipAmount">$0.00</p>
+      </div>
+      <div class="tipSummary">
+        <p><span class="textWhite">Total</span> <br> <span class="textBlue">/ person</span></p>
+        <p class="moneyAmount" id="totalAmount">$0.00</p>
+      </div>
+      <button type="button" class="resetButton" id="resetButton">Reset</button>
+    </section>
+
+  </article>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
